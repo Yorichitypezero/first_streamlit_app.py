@@ -41,7 +41,7 @@ streamlit.dataframe(fruits_to_show)
 
 #Importing Requests to display FruitVice API using User choice
 streamlit.header('Fruityvice Fruit Advice')
-fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
+fruit_choice = streamlit.text_input('What fruit would you like information about?','Apple')
 streamlit.write('The user entered ', fruit_choice)
 
 import requests
@@ -50,5 +50,6 @@ streamlit.write("The user entered",)
 
 #normalise the json file format
 fruityvice_normalized=pandas.json_normalize(fruityvice_response.json())
+
 #output to be displayed on the screen
 streamlit.dataframe(fruityvice_normalized)
