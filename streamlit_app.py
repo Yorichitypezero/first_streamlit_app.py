@@ -53,5 +53,4 @@ fruityvice_normalized=pandas.json_normalize(fruityvice_response.json())
 #output to be displayed on the screen
 streamlit.dataframe(fruityvice_normalized)
 
-reqirements.txt
 import snowflake.connector
