@@ -45,7 +45,8 @@ def get_fruityvice_data(this_fruit_choice):
    fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+this_fruit_choice)
    fruityvice_normalized=pandas.json_normalize(fruityvice_response.json())
    return fruityvice_normalized
-  
+
+streamlit.header("The Fruit Load List consists:")
 #New section for API response
 streamlit.header('Fruityvice Fruit Advice!')
 try:
@@ -57,6 +58,8 @@ try:
     streamlit.dataframe(back_from_function)
 except URLError as e:
    streamlit.error()
+   
+streamlit.header("The Fruit Load List consists:")   
 def get_fruit_list():
    with my_cnx_cursor()as my_cur:
       my_cur.execute("select * from fruit_load_list")
