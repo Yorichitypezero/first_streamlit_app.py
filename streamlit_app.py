@@ -1,4 +1,4 @@
-#Importing the library Streamlit
+#Importing the libraries for Streamlit
 import streamlit
 import pandas
 import requests
